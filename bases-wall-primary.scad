@@ -1,6 +1,6 @@
 /* [Texture] */
 // Select a texture.
-TEXTURE = "Dungeon Stone"; // [Dungeon Stone, Cut-Stone, Towne, Plain, Rough Stone, Facade - Ground Level, Facade - Ground Level -  Door, Facade - Upper Level, Facade - Upper Level - Chimney, Necromancer's Ossuary]
+TEXTURE = "Plain"; // [Dungeon Stone, Cut-Stone, Towne, Plain, Rough Stone, Facade - Ground Level, Facade - Ground Level -  Door, Facade - Upper Level, Facade - Upper Level - Chimney, Necromancer's Ossuary]
 
 /* [Base Wall Size] */
 // What is the wall size
@@ -22,6 +22,8 @@ SQUARE_BASIS = "inch"; // [25mm:25mm - Dwarven Forge/Hirstarts, inch:inch (25.4)
 LOCK = "openlock";// [openlock,infinitylock,dragonlock,none]
 // If OpenLock remove top of openlock bays
 TOPLESS = "true"; // [true, false]
+// If OpenLock open connector from either side of wall
+DUAL = "false"; // [true, false]
 // If OpenLock, do we want supports?
 SUPPORTS = "true"; // [true, false]
 
@@ -69,6 +71,9 @@ module base_wall_primary(x,square_basis) {
             if (MIRROR_BA == "false") {
                 translate([-x*square_basis/2,-square_basis/4,0]) connector_negative_strip(x, square_basis, edge_width, right=false);
             } else {
+                translate([x*square_basis/2,-square_basis/4,0]) mirror([1,0,0]) connector_negative_strip(x, square_basis, edge_width, right=false);
+            }
+            if (LOCK == "none") { //covers the weird edge case of BA magnetic
                 translate([x*square_basis/2,-square_basis/4,0]) mirror([1,0,0]) connector_negative_strip(x, square_basis, edge_width, right=false);
             }
         }

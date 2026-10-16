@@ -25,7 +25,7 @@
 // remove without cutting them out.
 module disk_magnetic_positive(magnet_hole=6, magnet_height=2.6) {
     if (magnet_hole > 0) {
-        // TODO
+        translate([0,-(magnet_hole+2)/2,0]) cube([magnet_hole+2,magnet_hole+2,magnet_hole]);
     }
 }
 

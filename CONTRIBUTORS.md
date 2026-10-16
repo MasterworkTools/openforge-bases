@@ -14,4 +14,4 @@ has signed the following statement by committing their entry:
 
 ## Assignments
 
-- [Legal name] (@github-handle): PR #[N], [YYYY-MM-DD]. Signed: [Legal name]
+- Jordan Cohen (@hypergig): PR #1, 2026-10-15. Signed: Jordan Cohen

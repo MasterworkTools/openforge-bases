@@ -36,7 +36,7 @@ module connector_negative_hex(side,square_basis,edge_width) {
     module _connector_negative() {
         for ( i = [0 : side-1] ) {
             if (i > 0 && i < (side - 1)) { // Prevents a connector at start and end
-                translate([square_basis*(i+1)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(side, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE);
+                translate([square_basis*(i+1)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(side, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT);
             }
         }
         if (side > 1) {

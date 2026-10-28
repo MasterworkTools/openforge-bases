@@ -97,11 +97,11 @@ module connector_negative_curved_large_impl(x,y,square_basis,edge_width,od_conne
     if (od_connectors > 0) {
         angle = 90;
         for ( i = [1 : od_connectors] ) {
-            rotate([0,0,90-angle/(od_connectors+1)*i]) translate([square_basis*x,0,0]) rotate([0,0,180]) connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, right=false, left=false);
+            rotate([0,0,90-angle/(od_connectors+1)*i]) translate([square_basis*x,0,0]) rotate([0,0,180]) connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, right=false, left=false);
         }
         if (curved_magnets) {
             for ( i = [1 : od_connectors + 1] ) {
-                rotate([0,0,90-angle/(od_connectors+1)*i+angle/(od_connectors+1)/2]) translate([square_basis*x,0,0]) rotate([0,0,180]) center_connector_negative(edge_width, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, height=HEIGHT, topless=TOPLESS);
+                rotate([0,0,90-angle/(od_connectors+1)*i+angle/(od_connectors+1)/2]) translate([square_basis*x,0,0]) rotate([0,0,180]) center_connector_negative(edge_width, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, height=HEIGHT, topless=TOPLESS);
             }
         }
     }
@@ -132,8 +132,8 @@ module connector_negative_curved_large_8(square_basis, edge_width) {
         if (MAGNETS == "none" && (LOCK == "openlock" || LOCK == "triplex")) {
             translate([square_basis*8/2, square_basis*8/2,0]) union() {
                 connector_negative_square_notch(8/2-2,8/2-2,square_basis,edge_width,east=false,north=false);
-                translate([0,square_basis*2,0]) connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, right=false, left=false);
-                translate([square_basis*2,0,0]) rotate([0,0,90]) connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, right=false, left=false);
+                translate([0,square_basis*2,0]) connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, right=false, left=false);
+                translate([square_basis*2,0,0]) rotate([0,0,90]) connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, right=false, left=false);
             }
         } else {
             translate([square_basis*8/2, square_basis*8/2,0]) connector_negative_square_notch(8/2-1,8/2-1,square_basis,edge_width,east=false,north=false);

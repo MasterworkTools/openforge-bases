@@ -21,6 +21,10 @@ CASES = {p.name: (p.name, {}) for p in sorted(ROOT.glob("bases-*.scad")) + sorte
 for f in ["bases-square.scad", "bases-wall-primary.scad"]:
     for m in ["magnetic", "snap_magnetic", "none"]:
         CASES[f"{f}[MAGNETS={m}]"] = (f, {"MAGNETS": m})
+# Every entry file whose customizer offers snap_magnetic gets a snap case.
+for p in sorted(ROOT.glob("bases-*.scad")):
+    if ",snap_magnetic" in p.read_text():
+        CASES.setdefault(f"{p.name}[MAGNETS=snap_magnetic]", (p.name, {"MAGNETS": "snap_magnetic"}))
 CASES.update({f"unit/{p.name}": (f"tests/unit/{p.name}", {}) for p in sorted((ROOT / "tests" / "unit").glob("*.scad"))})
 
 

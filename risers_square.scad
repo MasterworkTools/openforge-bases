@@ -41,6 +41,7 @@ module riser_square(x,y,square_basis) {
 
 MAGNETS = "none";
 MAGNET_HOLE = 0;
+MAGNET_HEIGHT = 2.6;
 PRIORITY = "lock";
 NOTCH = "false";
 TOPLESS = "false";

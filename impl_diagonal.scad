@@ -65,11 +65,11 @@ module connector_positive_diagonal_notch(x,y,diagonal_basis,edge_width,north=tru
 module connector_negative_diagonal(x,y,diagonal_basis,edge_width,north=true,south=true,east=true,west=true) {
     for ( i = [0 : y-1] ) {
         if(west) {
-            translate([0,diagonal_basis*(i+1)-diagonal_basis/2,0]) center_connector_negative(y, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, height=HEIGHT);
+            translate([0,diagonal_basis*(i+1)-diagonal_basis/2,0]) center_connector_negative(y, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, height=HEIGHT);
         }
         /*
         if(east) {
-            translate([diagonal_basis*x,diagonal_basis*(i+1)-diagonal_basis/2,0]) rotate([0,0,180]) center_connector_negative(y, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, , height=HEIGHT);
+            translate([diagonal_basis*x,diagonal_basis*(i+1)-diagonal_basis/2,0]) rotate([0,0,180]) center_connector_negative(y, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, height=HEIGHT);
         }
         */
     }
@@ -87,11 +87,11 @@ module connector_negative_diagonal(x,y,diagonal_basis,edge_width,north=true,sout
     }
     for ( i = [0 : x-1] ) {
         if(south) {
-            translate([diagonal_basis*(i+1)-diagonal_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(x, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, height=HEIGHT);
+            translate([diagonal_basis*(i+1)-diagonal_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(x, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, height=HEIGHT);
         }
         /*
         if(north) {
-            translate([diagonal_basis*(i+1)-diagonal_basis/2,diagonal_basis*y,0]) rotate([0,0,-90]) center_connector_negative(x, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, height=HEIGHT);
+            translate([diagonal_basis*(i+1)-diagonal_basis/2,diagonal_basis*y,0]) rotate([0,0,-90]) center_connector_negative(x, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, height=HEIGHT);
         }
         */
     }

@@ -171,27 +171,27 @@ module joint_connector_negative(edge, height=6, lock=LOCK, topless=TOPLESS, dual
     }
 }
 
-module connector_positive(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true, square_basis=25.4) {
+module connector_positive(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true) {
     if (left) {
-        translate([0,square_basis*(.5),0]) center_connector_positive(0, priority, lock, magnets, magnet_hole, height=height);
+        translate([0,square_basis*(.5),0]) center_connector_positive(0, priority, lock, magnets, magnet_hole, magnet_height, height=height);
     }
     if (center) {
-        translate([0,square_basis*(-.5),0]) center_connector_positive(0, priority, lock, magnets, magnet_hole, height=height);
+        translate([0,square_basis*(-.5),0]) center_connector_positive(0, priority, lock, magnets, magnet_hole, magnet_height, height=height);
     }
     if(right) {
         translate([0,0,0]) joint_connector_positive(0, height=height);
     }
 }
 
-module connector_negative(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true, magnets=true, square_basis=25.4) {
+module connector_negative(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true) {
     if (left) {
-        translate([0,square_basis*(.5),0]) center_connector_negative(0, priority, lock, magnets, magnet_hole, height=height);
+        translate([0,square_basis*(.5),0]) center_connector_negative(0, priority, lock, magnets, magnet_hole, magnet_height, height=height);
     }
     if (center) {
         translate([0,0,0]) joint_connector_negative(0, height=height);
     }
     if(right) {
-        translate([0,square_basis*(-.5),0]) center_connector_negative(0, priority, lock, magnets, magnet_hole, height=height);
+        translate([0,square_basis*(-.5),0]) center_connector_negative(0, priority, lock, magnets, magnet_hole, magnet_height, height=height);
     }
 }
 

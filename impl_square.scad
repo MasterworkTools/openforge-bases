@@ -61,13 +61,13 @@ module connector_positive_square_notch(x,y,square_basis,edge_width,north=true,so
 /*
  * Connector Negative
  */
-module connector_negative_square(x,y,square_basis,edge_width,north=true,south=true,east=true,west=true, priority=PRIORITY, lock=LOCK, magnets=MAGNETS, magnet_hole=MAGNET_HOLE, height=HEIGHT) {
+module connector_negative_square(x,y,square_basis,edge_width,north=true,south=true,east=true,west=true, priority=PRIORITY, lock=LOCK, magnets=MAGNETS, magnet_hole=MAGNET_HOLE, magnet_height=MAGNET_HEIGHT, height=HEIGHT) {
     for ( i = [0 : y-1] ) {
         if(west) {
-            translate([0,square_basis*(i+1)-square_basis/2,0]) center_connector_negative(y, priority, lock, magnets, magnet_hole, height=height);
+            translate([0,square_basis*(i+1)-square_basis/2,0]) center_connector_negative(y, priority, lock, magnets, magnet_hole, magnet_height, height=height);
         }
         if(east) {
-            translate([square_basis*x,square_basis*(i+1)-square_basis/2,0]) rotate([0,0,180]) center_connector_negative(y, priority, lock, magnets, magnet_hole, height=height);
+            translate([square_basis*x,square_basis*(i+1)-square_basis/2,0]) rotate([0,0,180]) center_connector_negative(y, priority, lock, magnets, magnet_hole, magnet_height, height=height);
         }
     }
     if (y > 1) {
@@ -82,10 +82,10 @@ module connector_negative_square(x,y,square_basis,edge_width,north=true,south=tr
     }
     for ( i = [0 : x-1] ) {
         if(south) {
-            translate([square_basis*(i+1)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(x, priority, lock, magnets, magnet_hole, height=height);
+            translate([square_basis*(i+1)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(x, priority, lock, magnets, magnet_hole, magnet_height, height=height);
         }
         if(north) {
-            translate([square_basis*(i+1)-square_basis/2,square_basis*y,0]) rotate([0,0,-90]) center_connector_negative(x, priority, lock, magnets, magnet_hole, height=height);
+            translate([square_basis*(i+1)-square_basis/2,square_basis*y,0]) rotate([0,0,-90]) center_connector_negative(x, priority, lock, magnets, magnet_hole, magnet_height, height=height);
         }
     }
     if (x > 1) {

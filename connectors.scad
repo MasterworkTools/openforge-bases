@@ -7,11 +7,12 @@ include <lock_openlock_topless_dual.scad>
 include <lock_magnetic.scad>
 include <lock_flex_magnetic.scad>
 include <lock_flex_magnetic_dual.scad>
+include <lock_disk_magnetic.scad>
 
 /*
  * Connector Layout
  */
-module center_connector_positive(edge, priority, lock, magnets, magnet_hole, height=6, topless=TOPLESS, dual=DUAL, square_basis=25.4) {
+module center_connector_positive(edge, priority, lock, magnets, magnet_hole, magnet_height, height=6, topless=TOPLESS, dual=DUAL, square_basis=25.4) {
     if (edge == 1) {
         if (priority == "lock" && (lock == "openlock_topless_dual" || (lock == "openlock_dual" && topless == "true"))) {
             openlock_topless_dual_positive(square_basis, height=height);
@@ -36,6 +37,8 @@ module center_connector_positive(edge, priority, lock, magnets, magnet_hole, hei
                 flex_magnetic_dual_positive(square_basis, magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_positive(magnet_hole, height=height);
+            } else if (magnets == "disk_magnetic") {
+                disk_magnetic_positive(magnet_hole, magnet_height);
             }
         }
     } else {
@@ -62,12 +65,14 @@ module center_connector_positive(edge, priority, lock, magnets, magnet_hole, hei
                 flex_magnetic_dual_positive(square_basis, magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_positive(magnet_hole, height=height);
+            } else if (magnets == "disk_magnetic") {
+                disk_magnetic_positive(magnet_hole, magnet_height);
             }
         }
     }
 }
 
-module center_connector_negative(edge, priority, lock, magnets, magnet_hole, height=6, topless=TOPLESS, dual=DUAL, square_basis=25.4) {
+module center_connector_negative(edge, priority, lock, magnets, magnet_hole, magnet_height, height=6, topless=TOPLESS, dual=DUAL, square_basis=25.4) {
     echo(magnets);
     if (edge == 1) {
         if (priority == "lock") {
@@ -97,6 +102,8 @@ module center_connector_negative(edge, priority, lock, magnets, magnet_hole, hei
                 flex_magnetic_dual_negative(square_basis, magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_negative(magnet_hole,height=height);
+            } else if (magnets == "disk_magnetic") {
+                disk_magnetic_negative(magnet_hole, magnet_height);
             }
         }
     } else {
@@ -127,6 +134,8 @@ module center_connector_negative(edge, priority, lock, magnets, magnet_hole, hei
                 flex_magnetic_dual_negative(square_basis, magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_negative(magnet_hole, height=height);
+            } else if (magnets == "disk_magnetic") {
+                disk_magnetic_negative(magnet_hole, magnet_height);
             }
         }
     }
@@ -162,7 +171,7 @@ module joint_connector_negative(edge, height=6, lock=LOCK, topless=TOPLESS, dual
     }
 }
 
-module connector_positive(square_basis, priority, lock, magnets, magnet_hole, height=6, right=true, center=true, left=true, square_basis=25.4) {
+module connector_positive(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true, square_basis=25.4) {
     if (left) {
         translate([0,square_basis*(.5),0]) center_connector_positive(0, priority, lock, magnets, magnet_hole, height=height);
     }
@@ -174,7 +183,7 @@ module connector_positive(square_basis, priority, lock, magnets, magnet_hole, he
     }
 }
 
-module connector_negative(square_basis, priority, lock, magnets, magnet_hole, height=6, right=true, center=true, left=true, magnets=true, square_basis=25.4) {
+module connector_negative(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true, magnets=true, square_basis=25.4) {
     if (left) {
         translate([0,square_basis*(.5),0]) center_connector_negative(0, priority, lock, magnets, magnet_hole, height=height);
     }
@@ -187,7 +196,7 @@ module connector_negative(square_basis, priority, lock, magnets, magnet_hole, he
 }
 
 
-module center_connector_wall_positive(edge, priority, lock, magnets, magnet_hole, height=6, topless=TOPLESS, square_basis=25.4) {
+module center_connector_wall_positive(edge, priority, lock, magnets, magnet_hole, magnet_height, height=6, topless=TOPLESS, square_basis=25.4) {
     if (edge == 1) {
         if (priority == "lock" && (lock == "openlock_topless" || (lock == "openlock" && topless == "true"))) {
             openlock_topless_positive(height=height);
@@ -204,6 +213,8 @@ module center_connector_wall_positive(edge, priority, lock, magnets, magnet_hole
                 magnetic_positive(magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_positive(magnet_hole, height=height);
+            } else if (magnets == "disk_magnetic") {
+                disk_magnetic_positive(magnet_hole, magnet_height);
             }
         }
     } else {
@@ -222,12 +233,14 @@ module center_connector_wall_positive(edge, priority, lock, magnets, magnet_hole
                 magnetic_positive(magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_positive(magnet_hole, height=height);
+            } else if (magnets == "disk_magnetic") {
+                disk_magnetic_positive(magnet_hole, magnet_height);
             }
         }
     }
 }
 
-module center_connector_wall_negative(edge, priority, lock, magnets, magnet_hole, height=6, topless=TOPLESS, square_basis=25.4) {
+module center_connector_wall_negative(edge, priority, lock, magnets, magnet_hole, magnet_height, height=6, topless=TOPLESS, square_basis=25.4) {
     if (edge == 1) {
         if (priority == "lock" && (lock == "openlock_topless" || (lock == "openlock" && topless == "true"))) {
             echo("Not Implemented");
@@ -291,10 +304,10 @@ module joint_connector_wall_negative(edge, height=6, lock=LOCK, topless=TOPLESS,
     }
 }
 
-module connector_positive_strip(x, square_basis, edge_width, left=true, right=true, priority=PRIORITY, lock=LOCK, magnets=MAGNETS, magnet_hole=MAGNET_HOLE, height=HEIGHT) {
+module connector_positive_strip(x, square_basis, edge_width, left=true, right=true, priority=PRIORITY, lock=LOCK, magnets=MAGNETS, magnet_hole=MAGNET_HOLE, magnet_height=MAGNET_HEIGHT, height=HEIGHT) {
     for ( i = [0 : x-1] ) {
         if ((i == 0 && left == true) || (i == x-1 && right == true) || (i > 0 && i < x-1) || (x == 1)) {
-            translate([square_basis*(i+1)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_positive(x, priority, lock, magnets, magnet_hole, height=height, square_basis=square_basis);
+            translate([square_basis*(i+1)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_positive(x, priority, lock, magnets, magnet_hole, magnet_height, height=height, square_basis=square_basis);
         }
     }
     if (x > 1) {
@@ -304,10 +317,10 @@ module connector_positive_strip(x, square_basis, edge_width, left=true, right=tr
     }
 }
 
-module connector_negative_strip(x, square_basis, edge_width, left=true, right=true, priority=PRIORITY, lock=LOCK, magnets=MAGNETS, magnet_hole=MAGNET_HOLE, height=HEIGHT) {
+module connector_negative_strip(x, square_basis, edge_width, left=true, right=true, priority=PRIORITY, lock=LOCK, magnets=MAGNETS, magnet_hole=MAGNET_HOLE, magnet_height=MAGNET_HEIGHT, height=HEIGHT) {
     for ( i = [0 : x-1] ) {
         if ((i == 0 && left == true) || (i == x-1 && right == true) || (i > 0 && i < x-1) || (x == 1)) {
-            #translate([square_basis*(i+1)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(x, priority, lock, magnets, magnet_hole, height=height, square_basis=square_basis);
+            #translate([square_basis*(i+1)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(x, priority, lock, magnets, magnet_hole, magnet_height, height=height, square_basis=square_basis);
         }
     }
     if (x > 1) {

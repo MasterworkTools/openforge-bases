@@ -7,7 +7,7 @@ include <lock_openlock_topless_dual.scad>
 include <lock_magnetic.scad>
 include <lock_flex_magnetic.scad>
 include <lock_flex_magnetic_dual.scad>
-include <lock_disk_magnetic.scad>
+include <lock_snap_magnetic.scad>
 
 /*
  * Connector Layout
@@ -37,8 +37,8 @@ module center_connector_positive(edge, priority, lock, magnets, magnet_hole, mag
                 flex_magnetic_dual_positive(square_basis, magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_positive(magnet_hole, height=height);
-            } else if (magnets == "disk_magnetic") {
-                disk_magnetic_positive(magnet_hole, magnet_height);
+            } else if (magnets == "snap_magnetic") {
+                snap_magnetic_positive(magnet_hole, height=height);
             }
         }
     } else {
@@ -65,8 +65,8 @@ module center_connector_positive(edge, priority, lock, magnets, magnet_hole, mag
                 flex_magnetic_dual_positive(square_basis, magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_positive(magnet_hole, height=height);
-            } else if (magnets == "disk_magnetic") {
-                disk_magnetic_positive(magnet_hole, magnet_height);
+            } else if (magnets == "snap_magnetic") {
+                snap_magnetic_positive(magnet_hole, height=height);
             }
         }
     }
@@ -102,8 +102,8 @@ module center_connector_negative(edge, priority, lock, magnets, magnet_hole, mag
                 flex_magnetic_dual_negative(square_basis, magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_negative(magnet_hole,height=height);
-            } else if (magnets == "disk_magnetic") {
-                disk_magnetic_negative(magnet_hole, magnet_height);
+            } else if (magnets == "snap_magnetic") {
+                snap_magnetic_negative(magnet_hole, magnet_height, height=height);
             }
         }
     } else {
@@ -134,8 +134,8 @@ module center_connector_negative(edge, priority, lock, magnets, magnet_hole, mag
                 flex_magnetic_dual_negative(square_basis, magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_negative(magnet_hole, height=height);
-            } else if (magnets == "disk_magnetic") {
-                disk_magnetic_negative(magnet_hole, magnet_height);
+            } else if (magnets == "snap_magnetic") {
+                snap_magnetic_negative(magnet_hole, magnet_height, height=height);
             }
         }
     }
@@ -171,27 +171,27 @@ module joint_connector_negative(edge, height=6, lock=LOCK, topless=TOPLESS, dual
     }
 }
 
-module connector_positive(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true, square_basis=25.4) {
+module connector_positive(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true) {
     if (left) {
-        translate([0,square_basis*(.5),0]) center_connector_positive(0, priority, lock, magnets, magnet_hole, height=height);
+        translate([0,square_basis*(.5),0]) center_connector_positive(0, priority, lock, magnets, magnet_hole, magnet_height, height=height);
     }
     if (center) {
-        translate([0,square_basis*(-.5),0]) center_connector_positive(0, priority, lock, magnets, magnet_hole, height=height);
+        translate([0,square_basis*(-.5),0]) center_connector_positive(0, priority, lock, magnets, magnet_hole, magnet_height, height=height);
     }
     if(right) {
         translate([0,0,0]) joint_connector_positive(0, height=height);
     }
 }
 
-module connector_negative(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true, magnets=true, square_basis=25.4) {
+module connector_negative(square_basis, priority, lock, magnets, magnet_hole, magnet_height, height=6, right=true, center=true, left=true) {
     if (left) {
-        translate([0,square_basis*(.5),0]) center_connector_negative(0, priority, lock, magnets, magnet_hole, height=height);
+        translate([0,square_basis*(.5),0]) center_connector_negative(0, priority, lock, magnets, magnet_hole, magnet_height, height=height);
     }
     if (center) {
         translate([0,0,0]) joint_connector_negative(0, height=height);
     }
     if(right) {
-        translate([0,square_basis*(-.5),0]) center_connector_negative(0, priority, lock, magnets, magnet_hole, height=height);
+        translate([0,square_basis*(-.5),0]) center_connector_negative(0, priority, lock, magnets, magnet_hole, magnet_height, height=height);
     }
 }
 
@@ -213,8 +213,8 @@ module center_connector_wall_positive(edge, priority, lock, magnets, magnet_hole
                 magnetic_positive(magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_positive(magnet_hole, height=height);
-            } else if (magnets == "disk_magnetic") {
-                disk_magnetic_positive(magnet_hole, magnet_height);
+            } else if (magnets == "snap_magnetic") {
+                snap_magnetic_positive(magnet_hole, height=height);
             }
         }
     } else {
@@ -233,8 +233,8 @@ module center_connector_wall_positive(edge, priority, lock, magnets, magnet_hole
                 magnetic_positive(magnet_hole, height=height);
             } else if (magnets == "flex_magnetic") {
                 flex_magnetic_positive(magnet_hole, height=height);
-            } else if (magnets == "disk_magnetic") {
-                disk_magnetic_positive(magnet_hole, magnet_height);
+            } else if (magnets == "snap_magnetic") {
+                snap_magnetic_positive(magnet_hole, height=height);
             }
         }
     }

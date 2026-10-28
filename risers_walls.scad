@@ -52,6 +52,7 @@ module riser_wall(x,half,square_basis) {
 
 MAGNETS = "none";
 MAGNET_HOLE = 0;
+MAGNET_HEIGHT = 2.6;
 TOPLESS = "false";
 PRIORITY = "lock";
 NOTCH = "false";

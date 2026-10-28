@@ -15,21 +15,21 @@ module connector_negative_curved_radial(x, cut, angle, square_basis, edge_width,
     rotate([0,0,90-angle]) translate([cut*square_basis,0,0]) connector_negative_square_notch(x-cut,x-cut,square_basis,edge_width,west=false,east=false,north=false);
     if (id_connectors > 0) {
         for ( i = [1 : id_connectors] ) {
-            rotate([0,0,90-angle/(id_connectors+1)*i]) translate([square_basis*cut,0,0])  connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, right=false, left=false);
+            rotate([0,0,90-angle/(id_connectors+1)*i]) translate([square_basis*cut,0,0])  connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, right=false, left=false);
         }
         if (id_magnets) {
             for ( i = [1 : id_connectors + 1] ) {
-                rotate([0,0,90-angle/(od_connectors+1)*i+angle/(od_connectors+1)/2]) translate([square_basis*cut,0,0]) rotate([0,0,0]) center_connector_negative(edge_width, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, height=HEIGHT, topless=TOPLESS);
+                rotate([0,0,90-angle/(od_connectors+1)*i+angle/(od_connectors+1)/2]) translate([square_basis*cut,0,0]) rotate([0,0,0]) center_connector_negative(edge_width, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, height=HEIGHT, topless=TOPLESS);
             }
         }
     }
     if (od_connectors > 0) {
         for ( i = [1 : od_connectors] ) {
-            rotate([0,0,90-angle/(od_connectors+1)*i]) translate([square_basis*x,0,0]) rotate([0,0,180]) connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, right=false, left=false);
+            rotate([0,0,90-angle/(od_connectors+1)*i]) translate([square_basis*x,0,0]) rotate([0,0,180]) connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, right=false, left=false);
         }
         if (od_magnets) {
             for ( i = [1 : od_connectors + 1] ) {
-                rotate([0,0,90-angle/(od_connectors+1)*i+angle/(od_connectors+1)/2]) translate([square_basis*x,0,0]) rotate([0,0,180]) center_connector_negative(edge_width, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, height=HEIGHT, topless=TOPLESS);
+                rotate([0,0,90-angle/(od_connectors+1)*i+angle/(od_connectors+1)/2]) translate([square_basis*x,0,0]) rotate([0,0,180]) center_connector_negative(edge_width, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, height=HEIGHT, topless=TOPLESS);
             }
         }
     }

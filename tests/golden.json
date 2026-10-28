@@ -1,0 +1,517 @@
+{
+ "bases-curved-inverted.scad": {
+  "volume": 10932.7,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   76.2,
+   76.2,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-curved-radial.scad": {
+  "volume": 15257.7,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   101.6,
+   101.6,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-curved-radial.scad[MAGNETS=snap_magnetic]": {
+  "volume": 15400.4,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   101.6,
+   101.6,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-curved.scad": {
+  "volume": 6234.5,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-curved.scad[MAGNETS=snap_magnetic]": {
+  "volume": 6305.8,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-diagonal.scad": {
+  "volume": 16376.4,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   101.6,
+   101.6,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309",
+   "WARNING: argument height supplied more than once in file impl_diagonal.scad, line 79"
+  ]
+ },
+ "bases-diagonal.scad[MAGNETS=snap_magnetic]": {
+  "volume": 16519.1,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   101.6,
+   101.6,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309",
+   "WARNING: argument height supplied more than once in file impl_diagonal.scad, line 79"
+  ]
+ },
+ "bases-hallway.scad": {
+  "volume": 12292.2,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   76.2,
+   50.8,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-hallway.scad[MAGNETS=snap_magnetic]": {
+  "volume": 12436.8,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   76.2,
+   50.8,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-hex-corner.scad": {
+  "volume": 5195.4,
+  "bbox": [
+   -25.4,
+   0.0,
+   0.0,
+   25.4,
+   56.69,
+   6.01
+  ],
+  "manifold": false,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-hex-corner.scad[MAGNETS=snap_magnetic]": {
+  "volume": 5232.4,
+  "bbox": [
+   -25.4,
+   0.0,
+   0.0,
+   25.4,
+   56.69,
+   6.01
+  ],
+  "manifold": false,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-hex.scad": {
+  "volume": 6652.6,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   76.2,
+   65.99,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-portal.scad": {
+  "volume": 20856.3,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   203.2,
+   50.8,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-portal.scad[MAGNETS=snap_magnetic]": {
+  "volume": 21073.2,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   203.2,
+   50.8,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square-corner.scad": {
+  "volume": 4718.7,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   38.1,
+   38.1,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square-corner.scad[MAGNETS=snap_magnetic]": {
+  "volume": 4791.0,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   38.1,
+   38.1,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square-internal_corner.scad": {
+  "volume": 8143.1,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   6.01
+  ],
+  "manifold": false,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square-internal_corner.scad[MAGNETS=snap_magnetic]": {
+  "volume": 8251.5,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   6.01
+  ],
+  "manifold": false,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square-wall.scad": {
+  "volume": 5576.9,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   38.1,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square-wall.scad[MAGNETS=snap_magnetic]": {
+  "volume": 5649.2,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   38.1,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square.scad": {
+  "volume": 8112.0,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square.scad[MAGNETS=magnetic]": {
+  "volume": 8300.2,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square.scad[MAGNETS=none]": {
+  "volume": 2621.6,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-square.scad[MAGNETS=snap_magnetic]": {
+  "volume": 8256.6,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   6.01
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 27",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "bases-wall-primary.scad": {
+  "volume": 2848.7,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.4,
+   6.35,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[MAGNETS=magnetic]": {
+  "volume": 2895.7,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.4,
+   6.35,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[MAGNETS=none]": {
+  "volume": 1837.7,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.4,
+   6.35,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[MAGNETS=snap_magnetic]": {
+  "volume": 2884.4,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.4,
+   6.35,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "risers_curved.scad": {
+  "volume": 87120.7,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   50.8
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "risers_square.scad": {
+  "volume": 100506.8,
+  "bbox": [
+   0.0,
+   0.0,
+   0.0,
+   50.8,
+   50.8,
+   50.8
+  ],
+  "manifold": true,
+  "warnings": [
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 147",
+   "WARNING: Ignoring unknown variable 'DUAL' in file connectors.scad, line 309"
+  ]
+ },
+ "risers_walls.scad": {
+  "volume": 24447.2,
+  "bbox": [
+   0.0,
+   -6.35,
+   0.0,
+   50.8,
+   6.35,
+   50.8
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "unit/lock_snap_magnetic.scad": {
+  "volume": 167.4,
+  "bbox": [
+   1.0,
+   -3.0,
+   -1.0,
+   7.0,
+   3.0,
+   6.1
+  ],
+  "manifold": true,
+  "warnings": []
+ }
+}

@@ -48,10 +48,10 @@ module connector_positive_hallway(x,y,square_basis,edge_width,north=true,south=t
 module connector_negative_hallway(x,y,square_basis,edge_width,north=true,south=true,east=true,west=true) {
     for ( i = [0 : y-1] ) {
         if(west) {
-            translate([0,square_basis*(i+1)-square_basis/2,0]) center_connector_negative(y, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE);
+            translate([0,square_basis*(i+1)-square_basis/2,0]) center_connector_negative(y, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT);
         }
         if(east) {
-            translate([square_basis*(x+1),square_basis*(i+1)-square_basis/2,0]) rotate([0,0,180]) center_connector_negative(y, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE);
+            translate([square_basis*(x+1),square_basis*(i+1)-square_basis/2,0]) rotate([0,0,180]) center_connector_negative(y, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT);
         }
     }
     if (y > 1) {
@@ -66,10 +66,10 @@ module connector_negative_hallway(x,y,square_basis,edge_width,north=true,south=t
     }
     for ( i = [0 : x-1] ) {
         if(south) {
-            translate([square_basis*(i+1.5)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(x, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE);
+            translate([square_basis*(i+1.5)-square_basis/2,0,0]) rotate([0,0,90]) center_connector_negative(x, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT);
         }
         if(north) {
-            translate([square_basis*(i+1.5)-square_basis/2,square_basis*y,0]) rotate([0,0,-90]) center_connector_negative(x, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE);
+            translate([square_basis*(i+1.5)-square_basis/2,square_basis*y,0]) rotate([0,0,-90]) center_connector_negative(x, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT);
         }
     }
     if (x > 1) {

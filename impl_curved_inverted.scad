@@ -127,7 +127,7 @@ module connector_negative_curved_inverted_default(x, cut, square_basis, edge_wid
 
     if (id_connectors > 0) {
         for ( i = [1 : id_connectors] ) {
-            rotate([0,0,90/(id_connectors+1)*i]) translate([square_basis*cut,0,0])  connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, right=false, left=false);
+            rotate([0,0,90/(id_connectors+1)*i]) translate([square_basis*cut,0,0])  connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, right=false, left=false);
         }
     }
 }
@@ -144,7 +144,7 @@ module connector_negative_curved_inverted_7a(x, cut, square_basis, edge_width, i
         if (id_connectors > 0) {
             union() {
                 for ( i = [1 : id_connectors] ) {
-                    rotate([0,0,90/(id_connectors+1)*i]) translate([square_basis*cut,0,0])  connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, right=false, left=false);
+                    rotate([0,0,90/(id_connectors+1)*i]) translate([square_basis*cut,0,0])  connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, right=false, left=false);
                 }
             }
         }
@@ -158,5 +158,5 @@ module connector_negative_curved_inverted_7b(x, cut, square_basis, edge_width, i
 
     translate([4*square_basis,4*square_basis,0]) connector_negative_square_notch(1,1,square_basis,edge_width,west=false,south=false);
 
-    rotate([0,0,45]) translate([square_basis*cut,0,0])  connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, right=false, left=false);
+    rotate([0,0,45]) translate([square_basis*cut,0,0])  connector_negative(square_basis, PRIORITY, LOCK, MAGNETS, MAGNET_HOLE, MAGNET_HEIGHT, right=false, left=false);
 }

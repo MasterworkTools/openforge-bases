@@ -25,10 +25,10 @@ SUPPORTS = "true"; // [true, false]
 
  /* [Magnets] */
 // Use magnets or not.
-MAGNETS = "flex_magnetic"; // [magnetic,flex_magnetic,disk_magnetic,none]
+MAGNETS = "flex_magnetic"; // [magnetic,flex_magnetic,snap_magnetic,none]
 // Size of hole for magnet.  6 works well for 5mm buckyball style magnets or 5x3 disk magnets.
 MAGNET_HOLE = 6; //.01
-// Size of the insert slot for magnet. Only applicable to disk_magnetic. Measure your magnetics with a caliper.
+// Size of the insert slot for magnet. Only applicable to snap_magnetic. Measure your magnets with a caliper.
 MAGNET_HEIGHT = 2.6; //.01
 
 /* [Electronics] */

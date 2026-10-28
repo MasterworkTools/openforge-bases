@@ -45,6 +45,8 @@ module snap_magnetic_chamber(magnet_hole) {
 
 module snap_magnetic_negative(magnet_hole=6, magnet_height=2.6, height=6) {
     if (magnet_hole > 0) {
+        // A shorter base leaves a vent wider than the magnet, so it is no longer captive.
+        assert(height >= magnet_hole, "snap_magnetic needs HEIGHT >= MAGNET_HOLE");
         $fn=100;
 
         // Padding to break through bottom faces, stupid open scad face bleeding.

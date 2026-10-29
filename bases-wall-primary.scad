@@ -1,6 +1,6 @@
 /* [Texture] */
 // Select a texture.
-TEXTURE = "Plain"; // [Dungeon Stone, Cut-Stone, Towne, Plain, Rough Stone, Facade - Ground Level, Facade - Ground Level -  Door, Facade - Upper Level, Facade - Upper Level - Chimney, Necromancer's Ossuary]
+TEXTURE = "Plain"; // [Dungeon Stone, Cut-Stone, Towne, Plain, Rough Stone, Facade - Ground Level, Facade - Ground Level - Door, Facade - Upper Level, Facade - Upper Level - Chimney, Necromancer's Ossuary, Aztlan, Nova Trail]
 
 /* [Base Wall Size] */
 // What is the wall size
@@ -109,7 +109,9 @@ texture_files = [
     ["Facade - Ground Level - Door", "facade.ground_level.door"],
     ["Facade - Upper Level", "facade.upper_level"],
     ["Facade - Upper Level - Chimney", "facade.upper_level.chimney"],
-    ["Necromancer's Ossuary", "necromancer"],  
+    ["Necromancer's Ossuary", "necromancer"],
+    ["Aztlan", "aztlan"],
+    ["Nova Trail", "nova_trail"],
 ];
 texture_file = texture_files[keyLookup(texture_files, [TEXTURE])][1];
 

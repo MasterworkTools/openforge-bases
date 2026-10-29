@@ -21,6 +21,10 @@ CASES = {p.name: (p.name, {}) for p in sorted(ROOT.glob("bases-*.scad")) + sorte
 for f in ["bases-square.scad", "bases-wall-primary.scad"]:
     for m in ["magnetic", "snap_magnetic", "none"]:
         CASES[f"{f}[MAGNETS={m}]"] = (f, {"MAGNETS": m})
+# Every wall texture in the customizer dropdown, so each texture's A blank is imported.
+textures = re.search(r"^TEXTURE = .*// \[(.*)\]", (ROOT / "bases-wall-primary.scad").read_text(), re.M).group(1)
+for t in textures.split(", "):
+    CASES[f"bases-wall-primary.scad[TEXTURE={t}]"] = ("bases-wall-primary.scad", {"TEXTURE": t})
 # Every entry file whose customizer offers snap_magnetic gets a snap case.
 for p in sorted(ROOT.glob("bases-*.scad")):
     if ",snap_magnetic" in p.read_text():

@@ -456,6 +456,162 @@
   "manifold": true,
   "warnings": []
  },
+ "bases-wall-primary.scad[TEXTURE=Aztlan]": {
+  "volume": 2716.5,
+  "bbox": [
+   -25.4,
+   -6.35,
+   -0.0,
+   25.4,
+   6.35,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Cut-Stone]": {
+  "volume": 2798.3,
+  "bbox": [
+   -25.4,
+   -6.35,
+   -0.0,
+   25.4,
+   6.35,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Dungeon Stone]": {
+  "volume": 2677.9,
+  "bbox": [
+   -25.4,
+   -6.35,
+   -0.01,
+   25.4,
+   6.49,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Facade - Ground Level - Door]": {
+  "volume": 3260.6,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.4,
+   9.5,
+   6.4
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Facade - Ground Level]": {
+  "volume": 2989.9,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.4,
+   7.05,
+   6.4
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Facade - Upper Level - Chimney]": {
+  "volume": 3849.1,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.4,
+   12.96,
+   6.4
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Facade - Upper Level]": {
+  "volume": 2917.5,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.4,
+   6.22,
+   6.4
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Necromancer's Ossuary]": {
+  "volume": 2709.4,
+  "bbox": [
+   -25.54,
+   -6.35,
+   0.0,
+   25.55,
+   6.33,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Nova Trail]": {
+  "volume": 2725.0,
+  "bbox": [
+   -25.4,
+   -6.35,
+   -0.0,
+   25.4,
+   6.35,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Plain]": {
+  "volume": 2848.7,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.4,
+   6.35,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Rough Stone]": {
+  "volume": 2585.0,
+  "bbox": [
+   -25.4,
+   -6.35,
+   0.0,
+   25.41,
+   6.64,
+   6.0
+  ],
+  "manifold": true,
+  "warnings": []
+ },
+ "bases-wall-primary.scad[TEXTURE=Towne]": {
+  "volume": 2858.5,
+  "bbox": [
+   -25.41,
+   -6.36,
+   -0.01,
+   25.38,
+   6.35,
+   6.07
+  ],
+  "manifold": true,
+  "warnings": []
+ },
  "risers_curved.scad": {
   "volume": 87120.7,
   "bbox": [
